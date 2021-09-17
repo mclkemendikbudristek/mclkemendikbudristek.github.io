@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container px-5 my-5">
+    <div class="card mb-3" id="beforeSend">
+        <div class="card-header">
+            <h2>Check-in Microlearning</h2>
+            <span class="text-danger">* Wajib</span>
+        </div>
+    </div>
+    <div class="card mb-3" id="afterSend" style="display: none;">
+        <div class="card-header">
+            <h2>Check-in Microlearning</h2>
+            <p>Anda telah berhasil check-in pada microlearning.<br>Selamat Belajar!</p>
+        </div>
+    </div>
+    <form id="contactForm" action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfNlj9Q8bvd1x5PZY7u-TdOobxD1jtfXBWjfc4BJGrZ0tj2yQ/formResponse" data-sb-form-api-token="API_TOKEN" method="POST">
+        <input type="hidden" name="entry.864480747" id="judul-mcl" value="Judul MCL">
+        <input type="hidden" name="entry.1601387417" id="jenjang">
+        <div class="form-floating mb-3">
+            <input class="form-control" id="namaLengkap" name="entry.90431255" type="text" placeholder="Nama Lengkap" data-sb-validations="required" required/>
+            <label for="namaLengkap">Nama Lengkap <span class="text-danger">*</span></label>
+            <div class="invalid-feedback" data-sb-feedback="namaLengkap:required">Nama Lengkap is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="nuptkNik" name="entry.1424498314" type="text" placeholder="NUPTK/NIK" data-sb-validations="required" required />
+            <label for="nuptkNik">NUPTK/NIK <span class="text-danger">*</span></label>
+            <div class="invalid-feedback" data-sb-feedback="nuptkNik:required">NUPTK/NIK is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <select class="form-select" name="entry.70268116" id="jabatan" aria-label="Jabatan">
+                <option value="Guru">Guru</option>
+                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Pendidikan Lainnya">Pendidikan Lainnya</option>
+            </select>
+            <label for="jabatan">Jabatan <span class="text-danger">*</span></label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label d-block">Jenjang <span class="text-danger">*</span></label>
+            <div class="form-check">
+                <input class="form-check-input" id="sdMi" type="radio" name="jenjang" value="SD/MI" data-sb-validations="required" required/>
+                <label class="form-check-label" for="sdMi">SD/MI</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" id="smpMts" type="radio" name="jenjang" value="SMP/MTS" data-sb-validations="required" required/>
+                <label class="form-check-label" for="smpMts">SMP/MTS</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" id="yangLain" type="radio" name="jenjang" value="other" data-sb-validations="required" required/>
+                <label class="form-check-label" for="yangLain">Yang lain: <input type="text" name="jenjang" id="other-value" style="border: none;"></label>
+            </div>
+            <div class="invalid-feedback" data-sb-feedback="jenjang:required">One option is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="hidden" name="entry.1060649005">
+            <select class="form-select" id="provinsi" aria-label="Provinsi" required>
+                <option value="">-- Pilih Provinsi --</option>
+            </select>
+            <label for="provinsi">Provinsi <span class="text-danger">*</span></label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="hidden" name="entry.1101652281">
+            <select class="form-select" id="kabupaten" aria-label="Kabupaten" required>
+                <option value="">-- Pilih Kabupaten --</option>
+            </select>
+            <label for="kabupaten">Kabupaten <span class="text-danger">*</span></label>
+        </div>
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                <p>To activate this form, sign up at</p>
+                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+            </div>
+        </div>
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Kirim</button>
+        </div>
+        <div class="d-grid">
+            <a href="#" id="clear">Kosongkan formulir</a>
+        </div>
+    </form>
+</div>
+<!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script src="./main.js"></script>
+<script>
+    $(document).ready(function(){
+        const provinsi = $('#provinsi');
+        const kabupaten = $('#kabupaten');
+        let url = (window.location != window.parent.location)
+            ? document.referrer
+            : document.location.href;
+        if(document.location.href.includes("mcl-title")){
+            const uriArr = document.location.href.split("mcl-title=");
+            if(uriArr.length > 1){
+                url = decodeURIComponent(uriArr[1]);
+            }
+        }
+        console.log(url);
+        $('#judul-mcl').val(url);
+        console.log(document.referrer)
+
+        getProvinsi("-- Pilih Provinsi --", provinsi);
+        provinsi.on("change", function(e){
+            e.preventDefault();
+            const id = provinsi.val();
+            const text = $( '#provinsi option:selected' ).text();
+            $('[name="entry.1060649005"]').val(text);
+            getKabupaten("-- Pilih Kabupaten --", kabupaten, id);
+        })
+
+        kabupaten.on("change", function(e){
+            e.preventDefault();
+            const text = $( '#kabupaten option:selected' ).text();
+            $('[name="entry.1101652281"]').val(text);
+        })
+
+        $('[name="jenjang"]').on("click", function(e){
+            const valJenjang = $(this).val();
+            if(valJenjang.includes("other")){
+                $('#jenjang').val($('#other-value').val());
+                $('#other-value').focus();
+            }else{
+                $('#jenjang').val(valJenjang);
+            }
+        })
+
+        $('#other-value').on("click", function(e){
+            e.preventDefault();
+            $('#yangLain').click();
+        })
+
+        $('#other-value').on("keyup", function(e){
+            e.preventDefault();
+            const val = $(this).val();
+            $('#jenjang').val(val);
+        })
+
+        $('#other-value').on("focusout", function(e){
+            e.preventDefault();
+            const val = $(this).val();
+            $('#jenjang').val(val);
+        })
+
+        const form = $('#contactForm');
+
+        form.submit(function(e){
+            e.preventDefault();
+            const url = form.attr("action");
+            try {
+                $.ajax({
+                    url:url,
+                    type: "post",
+                    dataType:"json",
+                    data: form.serialize(),
+                    success:function(result){
+                        console.log(result);
+                    },
+                    error:function(Xhr, status, t){
+
+                    }
+                })
+                $('#beforeSend').hide();
+                $('#afterSend').show();
+                form.hide();
+            } catch (error) {
+                $('#beforeSend').hide();
+                $('#afterSend').show();
+            }
+        })
+    })
+</script>
+</body>
+</html>
