@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="TechyDevs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Micro Learning</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="16x16" href="images/favicon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-awesome.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/animated-headline.css">
+    <link rel="stylesheet" href="css/plyr.css">
+    <link rel="stylesheet" href="css/jquery-te-1.4.0.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--======================================
+        START COURSE-DASHBOARD
+======================================-->
+<section class="course-dashboard">
+    <div class="course-dashboard-wrap">
+        <div class="course-dashboard-container d-flex">
+            <div class="course-dashboard-column">
+                <div class="lecture-viewer-container">
+                    <div class="lecture-video-item" id="mcl-content">
+                        <!-- <iframe width="100%" src="/ipa/mcl2.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: 100vh;"></iframe> -->
+                        <p class='text-center pt-4'><strong>Mohon Maaf !!! <br> Tidak dapat menampilkan konten untuk sementara waktu.</strong></p>
+                    </div>
+                </div><!-- end lecture-viewer-container -->
+            </div><!-- end course-dashboard-column -->
+            <div class="course-dashboard-sidebar-column">
+                <button class="sidebar-open" type="button"><i class="la la-angle-left"></i> Microlearning</button>
+                <div class="course-dashboard-sidebar-wrap custom-scrollbar-styled">
+                    <div class="course-dashboard-side-heading d-flex align-items-center justify-content-between">
+                        <h3 class="fs-18 font-weight-semi-bold">Microlearning</h3>
+                        <button class="sidebar-close" type="button"><i class="la la-times"></i></button>
+                    </div><!-- end course-dashboard-side-heading -->
+                    <div class="course-dashboard-side-content">
+                        <div class="accordion generic-accordion generic--accordion" id="accordionCourseExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne" style="display: none;">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="la la-angle-down"></i>
+                                        <i class="la la-angle-up"></i>
+                                        <span class="fs-15"> Section 1: Dive in and Discover After Effects</span>
+                                        <span class="course-duration">
+                                            <span>1/5</span>
+                                            <span>21min</span>
+                                        </span>
+                                    </button>
+                                </div><!-- end card-header -->
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCourseExample">
+                                    <div class="card-body p-0">
+                                        <ul class="curriculum-sidebar-list" id="mcl-navigasi">
+                                            
+                                        </ul>
+                                    </div><!-- end card-body -->
+                                </div><!-- end collapse -->
+                            </div><!-- end card -->
+                        </div><!-- end accordion-->
+                    </div><!-- end course-dashboard-side-content -->
+                </div><!-- end course-dashboard-sidebar-wrap -->
+            </div><!-- end course-dashboard-sidebar-column -->
+        </div><!-- end course-dashboard-container -->
+    </div><!-- end course-dashboard-wrap -->
+</section><!-- end course-dashboard -->
+<!--======================================
+        END COURSE-DASHBOARD
+======================================-->
+
+<!-- template js files -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/waypoint.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/fancybox.js"></script>
+<script src="js/datedropper.min.js"></script>
+<script src="js/emojionearea.min.js"></script>
+<script src="js/jquery-te-1.4.0.min.js"></script>
+<script src="js/jquery.MultiFile.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // var player = new Plyr('#player');
+
+    $(document).ready(function(){
+        const mclContent = $('#mcl-content');
+        const mclNavigasi = $('#mcl-navigasi');
+        const navigator = $('.navigator');
+        const content = '<iframe width="100%" src="#source#" title="#title#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: 100vh;"></iframe>';
+        const nav = '<li class="course-item-link navigator #active#" data-url="#url#"><div class="course-item-content-wrap"><div class="course-item-content pt-2 pb-2"><h4 class="fs-15" data-url="#url#">#title#</h4></div></div></li>';
+        const uri = document.location.href;
+        const bstudi = ["ipa", "indonesia", "matematika"];
+        const load = function(){
+            if(uri.includes("bstudi=")){
+                const uris = uri.split("bstudi=");
+                if (uris.length < 2) window.history.back();
+                let currentBStudi = uris[1];
+                if(currentBStudi.includes("#")){
+                    currentBStudi = currentBStudi.substr(0, currentBStudi.indexOf("#"));
+                }
+                const existBStudi = bstudi.indexOf(currentBStudi);
+                if(existBStudi == -1) window.history.back();
+                generateMenu(currentBStudi);
+            }else{
+                window.history.back();
+            }
+        }();
+
+        function generateMenu (currentBStudi){
+            $.ajax({
+                url: "mcl.json",
+                type: "get",
+                dataType: "json",
+                success:function(result){
+                    const mcls = result[currentBStudi];
+                    if(mcls != undefined) {
+                        if(mcls.length > 0){
+                            const mcl1 = mcls[0];
+                            mclContent.html(content.replace("#source#", mcl1.url).replace("#title#", mcl1.title));
+                        }
+
+                        mcls.forEach((function(mcl, index){
+                            let active = index == 0 ? "active" : "";
+                            let curNav = nav.replace("#active#", active).replace("#title#", mcl.title).replaceAll("#url#", mcl.url);
+                            mclNavigasi.append(curNav);
+                        }));
+                    }else{
+                        mclContent.html("<p class='text-center pt-4'><strong>Mohon Maaf !!! <br> Tidak dapat menampilkan konten untuk sementara waktu.</strong></p>")
+                    }
+                }
+            })
+        }
+
+        $(document).on("click", '.navigator', function(e){
+            e.preventDefault();
+            let url = $(this).attr("data-url");
+            let title = $(this).text();
+            console.log(url);
+            mclContent.html(content.replace("#source#", url).replace("#title#", title));
+
+            $('.navigator').each(function(index, item){
+                $(item).removeClass("active");
+                let dataUrl = $(item).attr("data-url");
+                if(dataUrl == url) $(item).addClass('active');
+            })
+        })
+    })
+</script>
+</body>
+
+<!-- Mirrored from techydevs.com/demos/themes/html/aduca-demo/aduca/lesson-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 25 Sep 2021 07:26:35 GMT -->
+</html>

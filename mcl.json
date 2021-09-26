@@ -1,0 +1,124 @@
+{
+    "ipa": [
+        {
+            "title": "Microlearning 1 - Kecakapan Abad 21",
+            "url" : "ipa/mcl1.html"
+        },
+        {
+            "title": "Microlearning 2 - Pentingnya Literasi Sains",
+            "url" : "ipa/mcl2.html"
+        },
+        {
+            "title": "Microlearning 3 - Framework Pisa Bidang Sains",
+            "url" : "ipa/mcl3.html"
+        },
+        {
+            "title": "Microlearning 4 - Mendeskripsikan Fenomena/Gejala Alam Secara Ilmiah",
+            "url" : "ipa/mcl4.html"
+        },
+        {
+            "title": "Microlearning 5 - Pembelajaran IPA untuk Meningkatkan Literasi Sains",
+            "url" : "ipa/mcl5.html"
+        },
+        {
+            "title": "Microlearning 6 - Menafsirkan Data dan bukti secara Ilmiah",
+            "url" : "ipa/mcl6.html"
+        },
+        {
+            "title": "Microlearning 7 - Science & Collaborative problem solving",
+            "url" : "ipa/mcl7.html"
+        },
+        {
+            "title": "Microlearning 8 - Bagaimana Menilai Literasi Sains Siswa?",
+            "url" : "ipa/mcl8.html"
+        },
+        {
+            "title": "Microlearning 9 - Mengembangkan asesmen literasi sains sesuai dengan framework PISA",
+            "url" : "ipa/mcl9.html"
+        }
+    ],
+    "matematika":[
+        {
+            "title": "Microlearning 1 - Kecakapan Abad 21",
+            "url" : "matematika/mcl1.html"
+        },
+        {
+            "title": "Microlearning 2 - Kecakapan Abad 21",
+            "url" : "matematika/mcl2.html"
+        },
+        {
+            "title": "Microlearning 3 - Kecakapan Abad 21",
+            "url" : "matematika/mcl3.html"
+        },
+        {
+            "title": "Microlearning 4 - Kecakapan Abad 21",
+            "url" : "matematika/mcl4.html"
+        },
+        {
+            "title": "Microlearning 5 - Kecakapan Abad 21",
+            "url" : "matematika/mcl5.html"
+        },
+        {
+            "title": "Microlearning 6 - Kecakapan Abad 21",
+            "url" : "matematika/mcl6.html"
+        },
+        {
+            "title": "Microlearning 7 - Kecakapan Abad 21",
+            "url" : "matematika/mcl7.html"
+        },
+        {
+            "title": "Microlearning 8 - Kecakapan Abad 21",
+            "url" : "matematika/mcl8.html"
+        },
+        {
+            "title": "Microlearning 9 - Kecakapan Abad 21",
+            "url" : "matematika/mcl9.html"
+        },
+        {
+            "title": "Microlearning 10 - Kecakapan Abad 21",
+            "url" : "matematika/mcl10.html"
+        }
+    ],
+    "indonesia":[
+        {
+            "title": "Microlearning 1 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl1.html"
+        },
+        {
+            "title": "Microlearning 2 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl2.html"
+        },
+        {
+            "title": "Microlearning 3 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl3.html"
+        },
+        {
+            "title": "Microlearning 4 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl4.html"
+        },
+        {
+            "title": "Microlearning 5 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl5.html"
+        },
+        {
+            "title": "Microlearning 6 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl6.html"
+        },
+        {
+            "title": "Microlearning 7 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl7.html"
+        },
+        {
+            "title": "Microlearning 8 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl8.html"
+        },
+        {
+            "title": "Microlearning 9 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl9.html"
+        },
+        {
+            "title": "Microlearning 10 - Kecakapan Abad 21",
+            "url" : "indonesia/mcl10.html"
+        }
+    ]
+}
