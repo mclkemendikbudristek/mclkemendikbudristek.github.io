@@ -9507,7 +9507,7 @@ div.datedropper .picker .pick-lg-b li {
     -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
-    z-index: 5;
+    z-index: 9999;
     -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .05);
     -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .05);
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, .05);
@@ -9566,7 +9566,7 @@ div.datedropper .picker .pick-lg-b li {
     overflow-x: hidden;
     padding-bottom: 90px;
     background-color: #fff;
-    z-index: 5
+    z-index: 9999
 }
 
 .footer-item {

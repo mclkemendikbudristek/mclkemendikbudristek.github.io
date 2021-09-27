@@ -73,6 +73,7 @@
                                 </div><!-- end collapse -->
                             </div><!-- end card -->
                         </div><!-- end accordion-->
+                        <a class="btn btn-danger" href="index.html" style="position: absolute; bottom: 12px; right: 12px;"><i class="la la-arrow-left"></i> Kembali</a>
                     </div><!-- end course-dashboard-side-content -->
                 </div><!-- end course-dashboard-sidebar-wrap -->
             </div><!-- end course-dashboard-sidebar-column -->
@@ -104,7 +105,7 @@
         const mclContent = $('#mcl-content');
         const mclNavigasi = $('#mcl-navigasi');
         const navigator = $('.navigator');
-        const content = '<iframe width="100%" src="#source#" title="#title#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: 100vh;"></iframe>';
+        const content = '<iframe class="iframe" width="100%" scrolling="yes" src="#source#" title="#title#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: 100vh;"></iframe>';
         const nav = '<li class="course-item-link navigator #active#" data-url="#url#"><div class="course-item-content-wrap"><div class="course-item-content pt-2 pb-2"><h4 class="fs-15" data-url="#url#">#title#</h4></div></div></li>';
         const uri = document.location.href;
         const bstudi = ["ipa", "indonesia", "matematika"];
@@ -135,6 +136,7 @@
                         if(mcls.length > 0){
                             const mcl1 = mcls[0];
                             mclContent.html(content.replace("#source#", mcl1.url).replace("#title#", mcl1.title));
+                            activeScrolling();
                         }
 
                         mcls.forEach((function(mcl, index){
@@ -155,13 +157,49 @@
             let title = $(this).text();
             console.log(url);
             mclContent.html(content.replace("#source#", url).replace("#title#", title));
-
             $('.navigator').each(function(index, item){
                 $(item).removeClass("active");
                 let dataUrl = $(item).attr("data-url");
                 if(dataUrl == url) $(item).addClass('active');
             })
+            activeScrolling();
         })
+
+        async function activeScrolling(pesan = ""){
+            const iframe = $('iframe');
+            console.log(pesan);
+            let b = 0;
+            let i = await iframe.each((index, item) =>{
+                const iframeChild = $(item).contents().find("iframe");
+                console.log(iframeChild);
+                iframeChild.each((i, itm) =>{
+                    $(itm).attr("scrolling", "yes");
+                })
+                let nav = $(item).contents().find(".h5p-interactive-book-navigation-chapter-title-text[title='Check-Out']");
+                let nav2 = $(item).contents().find(".h5p-interactive-book-navigation-chapter-title-text[title='Check-In']");
+                if(nav.length > 0){
+                    nav.unbind();
+                    nav.click(function(e){
+                        activeScrolling("ini dari element");
+                        console.log("clicked")
+                    })
+                }
+                if(nav2.length > 0){
+                    nav2.unbind();
+                    nav2.click(function(e){
+                        activeScrolling("ini dari element");
+                        console.log("clicked")
+                    })
+                }
+                if(iframeChild.length > 0) b =1;
+            })
+            if(b) return;
+            setTimeout(()=>{
+                activeScrolling();
+            },1000);
+        }
+
+
     })
 </script>
 </body>
