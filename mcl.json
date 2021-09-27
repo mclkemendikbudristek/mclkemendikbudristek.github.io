@@ -39,85 +39,85 @@
     ],
     "matematika":[
         {
-            "title": "Microlearning 1 - Kecakapan Abad 21",
+            "title": "Microlearning 1 - Pengalaman mengerjakan Soal PISA (literasi) Matematika",
             "url" : "matematika/mcl1.html"
         },
-        {
-            "title": "Microlearning 2 - Kecakapan Abad 21",
+        { 
+            "title": "Microlearning 2 - Pentingnya Literasi Matematika Untuk Menjadi Masyarakat Abad 21",
             "url" : "matematika/mcl2.html"
         },
         {
-            "title": "Microlearning 3 - Kecakapan Abad 21",
+            "title": "Microlearning 3 - Framework PISA Literasi Matematika",
             "url" : "matematika/mcl3.html"
         },
         {
-            "title": "Microlearning 4 - Kecakapan Abad 21",
+            "title": "Microlearning 4 - Identifikasi DOmain Bilangan",
             "url" : "matematika/mcl4.html"
         },
         {
-            "title": "Microlearning 5 - Kecakapan Abad 21",
+            "title": "Microlearning 5 - Identifikasi Domain Bentuk Bangun dan Ruang",
             "url" : "matematika/mcl5.html"
         },
         {
-            "title": "Microlearning 6 - Kecakapan Abad 21",
+            "title": "Microlearning 6 - Identifikasi Domain Aljabar",
             "url" : "matematika/mcl6.html"
         },
         {
-            "title": "Microlearning 7 - Kecakapan Abad 21",
+            "title": "Microlearning 7 - Identifikasi Domain Data dan Ketidakpastian",
             "url" : "matematika/mcl7.html"
         },
         {
-            "title": "Microlearning 8 - Kecakapan Abad 21",
+            "title": "Microlearning 8 - Ide Pembelajaran dalam Meningkatkan Literasi Matematika",
             "url" : "matematika/mcl8.html"
         },
         {
-            "title": "Microlearning 9 - Kecakapan Abad 21",
+            "title": "Microlearning 9 - Asessmen yang Sesuai untuk Literasi Matematika",
             "url" : "matematika/mcl9.html"
         },
         {
-            "title": "Microlearning 10 - Kecakapan Abad 21",
+            "title": "Microlearning 10 - Mengembangkan Soal literasi Matematika Tipe PISA",
             "url" : "matematika/mcl10.html"
         }
     ],
     "indonesia":[
         {
-            "title": "Microlearning 1 - Kecakapan Abad 21",
+            "title": "Microlearning 1 - Mengapa Literasi Membaca",
             "url" : "indonesia/mcl1.html"
         },
         {
-            "title": "Microlearning 2 - Kecakapan Abad 21",
+            "title": "Microlearning 2 - Framework PISA",
             "url" : "indonesia/mcl2.html"
         },
         {
-            "title": "Microlearning 3 - Kecakapan Abad 21",
+            "title": "Microlearning 3 - Karakteristik Soal Literasi Membaca PISA",
             "url" : "indonesia/mcl3.html"
         },
         {
-            "title": "Microlearning 4 - Kecakapan Abad 21",
+            "title": "Microlearning 4 - Contoh-contoh  Soal dan Latihan Mengerjakan Soal Literasi Membaca PISA",
             "url" : "indonesia/mcl4.html"
         },
         {
-            "title": "Microlearning 5 - Kecakapan Abad 21",
+            "title": "Microlearning 5 - Analisis Penyebab Kesulitan Edit ",
             "url" : "indonesia/mcl5.html"
         },
         {
-            "title": "Microlearning 6 - Kecakapan Abad 21",
+            "title": "Microlearning 6 - Solusi Siswa Menyelesaikan Soal PISA",
             "url" : "indonesia/mcl6.html"
         },
         {
-            "title": "Microlearning 7 - Kecakapan Abad 21",
+            "title": "Microlearning 7 - Literasi Menemukan Informasi Tersurat",
             "url" : "indonesia/mcl7.html"
         },
         {
-            "title": "Microlearning 8 - Kecakapan Abad 21",
+            "title": "Microlearning 8 - Literasi Membaca Memahami",
             "url" : "indonesia/mcl8.html"
         },
         {
-            "title": "Microlearning 9 - Kecakapan Abad 21",
+            "title": "Microlearning 9 - Mengevaluasi dan Merefleksi Informasi21",
             "url" : "indonesia/mcl9.html"
         },
         {
-            "title": "Microlearning 10 - Kecakapan Abad 21",
+            "title": "Microlearning 10 - Pengembangan Soal Literasi Setara Asesmen Internasional",
             "url" : "indonesia/mcl10.html"
         }
     ]
