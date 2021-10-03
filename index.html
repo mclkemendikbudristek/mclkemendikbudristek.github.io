@@ -34,15 +34,14 @@
 <!--================================
         START HERO AREA
 =================================-->
-<section class="hero-area">
-    <div class="hero-slider owl-action-styled">
-        <div class="hero-slider-item hero-bg-4">
-            <div class="container">
-                <div class="hero-content">
-                </div><!-- end hero-content -->
-            </div><!-- end container -->
-        </div><!-- end hero-slider-item -->
-    </div><!-- end hero-slide -->
+<section class="feature-area">
+   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="./images/contoh.jpeg" alt="First slide">
+            </div>
+        </div>
+    </div>
 </section><!-- end hero-area -->
 <!--================================
         END HERO AREA
@@ -146,6 +145,9 @@ PISA memonitor dan membandingkan hasil pendidikan dalam soal literasi membaca, l
     <script src="js/tooltipster.bundle.min.js"></script>
     <script src="js/jquery.lazy.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $('.carousel').carousel()
+    </script>
 </body>
 
 </html>
